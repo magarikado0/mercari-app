@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { supabase } from './supabaseClient';
 import './App.css';
-import { User } from '@supabase/supabase-js';
+import type { User } from '@supabase/supabase-js';
 
 type Item = {
   id: string;
