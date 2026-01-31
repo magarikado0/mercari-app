@@ -107,7 +107,7 @@ function App() {
           </div>
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: "20px", alignItems: "flex-start" }}>
-            <form onSubmit={addItem} className="card" style={{ flex: "1", minWidth: "300px", padding: "20px", boxSizing: "border-box" }}>
+            <form onSubmit={addItem} className="card" style={{ flex: "1", minWidth: "280px", padding: "20px", boxSizing: "border-box" }}>
             <h3 style={{ fontSize: "1.5rem", marginBottom: "20px" }}>新規登録</h3>
 
             <div className="input-group" style={{ marginBottom: "20px" }}>
@@ -149,7 +149,7 @@ function App() {
 
             <button type="submit" style={{ padding: "15px", fontSize: "1.1rem", fontWeight: "bold" }}>在庫に追加する</button>
           </form>
-          <div style={{ border: "1px solid #eee", padding: "20px", borderRadius: "12px", flex: "2", minWidth: "300px", backgroundColor: "#fff", boxShadow: "0 2px 10px rgba(0,0,0,0.05)", boxSizing: "border-box" }}>
+          <div style={{ border: "1px solid #eee", padding: "20px", borderRadius: "12px", flex: "2", minWidth: "280px", backgroundColor: "#fff", boxShadow: "0 2px 10px rgba(0,0,0,0.05)", boxSizing: "border-box" }}>
             <h2 style={{ fontSize: "1.5rem", marginBottom: "20px" }}>在庫一覧</h2>
             <div>
               {items.map((item) => {
