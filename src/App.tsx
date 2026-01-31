@@ -92,7 +92,7 @@ function App() {
   const logout = () => supabase.auth.signOut();
 
   return (
-    <div className="app-container" style={{ maxWidth: "1400px", margin: "0 auto", padding: "40px 20px" }}>
+    <div className="app-container" style={{ maxWidth: "1400px", margin: "0 auto", padding: "20px 15px" }}>
       {!user ? (
         <div className='card' style={{ textAlign: "center", maxWidth: "500px", margin: "100px auto", padding: "40px" }}>
           <h1 style={{ fontSize: "2rem", marginBottom: "20px" }}>メルカリ在庫管理</h1>
@@ -106,8 +106,8 @@ function App() {
             <button onClick={logout} style={{ width: "auto", padding: "10px 20px", fontSize: "0.9rem" }}>ログアウト</button>
           </div>
 
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "30px", alignItems: "flex-start" }}>
-            <form onSubmit={addItem} className="card" style={{ flex: "1", minWidth: "350px", padding: "30px" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "20px", alignItems: "flex-start" }}>
+            <form onSubmit={addItem} className="card" style={{ flex: "1", minWidth: "300px", padding: "20px", boxSizing: "border-box" }}>
             <h3 style={{ fontSize: "1.5rem", marginBottom: "20px" }}>新規登録</h3>
 
             <div className="input-group" style={{ marginBottom: "20px" }}>
@@ -149,7 +149,7 @@ function App() {
 
             <button type="submit" style={{ padding: "15px", fontSize: "1.1rem", fontWeight: "bold" }}>在庫に追加する</button>
           </form>
-          <div style={{ border: "1px solid #eee", padding: "30px", borderRadius: "12px", flex: "2", minWidth: "450px", backgroundColor: "#fff", boxShadow: "0 2px 10px rgba(0,0,0,0.05)" }}>
+          <div style={{ border: "1px solid #eee", padding: "20px", borderRadius: "12px", flex: "2", minWidth: "300px", backgroundColor: "#fff", boxShadow: "0 2px 10px rgba(0,0,0,0.05)", boxSizing: "border-box" }}>
             <h2 style={{ fontSize: "1.5rem", marginBottom: "20px" }}>在庫一覧</h2>
             <div>
               {items.map((item) => {
