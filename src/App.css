@@ -1,14 +1,17 @@
 /* --- 全体の基本設定 --- */
 html {
-  background-color: #f4f4f7;
+  background-color: #f4f4f7 !important;
 }
 
 body {
+  background-color: #f4f4f7 !important; /* 他のCSSに邪魔されないように強制適用 */
   color: #333;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   margin: 0;
   padding-bottom: 50px; /* 下部に少し余白 */
   line-height: 1.5;
+  min-height: 100vh; /* 画面の高さ分を確保 */
+  width: 100%;
 }
 
 /* --- コンテナ（スマホ幅に最適化） --- */

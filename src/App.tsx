@@ -92,7 +92,7 @@ function App() {
   const logout = () => supabase.auth.signOut();
 
   return (
-    <div className="app-container" style={{ maxWidth: "1400px", margin: "0 auto", padding: "20px 15px" }}>
+    <div className="app-container" style={{ maxWidth: "1400px", margin: "0 auto", padding: "20px 15px", minHeight: "100vh" }}>
       {!user ? (
         <div className='card' style={{ textAlign: "center", maxWidth: "500px", margin: "100px auto", padding: "40px" }}>
           <h1 style={{ fontSize: "2rem", marginBottom: "20px" }}>メルカリ在庫管理</h1>
