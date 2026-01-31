@@ -47,6 +47,16 @@ h2 {
   color: #666;
 }
 
+textarea {
+  font-family: inherit;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #ff333f;
+}
+
 /* --- 入力フォーム --- */
 input {
   width: 100%;
@@ -101,6 +111,79 @@ button:active {
   font-size: 1.2rem;
   font-weight: bold;
   color: #222;
+}
+
+/* --- ステータスバッジ --- */
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.status-0 { background-color: #eee; color: #666; } /* 出品準備中 */
+.status-1 { background-color: #e3f2fd; color: #1976d2; } /* 出品中 */
+.status-2 { background-color: #fff3e0; color: #f57c00; } /* 発送準備中 */
+.status-3 { background-color: #f3e5f5; color: #7b1fa2; } /* 発送済み */
+.status-4 { background-color: #e8f5e9; color: #2e7d32; } /* 受け取り済み */
+
+/* --- ステータス進行ボタン --- */
+.advance-button {
+  margin-top: 15px;
+  background-color: #fff;
+  color: #ff333f;
+  border: 2px solid #ff333f;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.advance-button:hover {
+  background-color: #ff333f;
+  color: #fff;
+}
+
+/* --- ステータス操作エリア --- */
+.status-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.status-button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+  margin-top: 0; /* 既存のbuttonスタイルのmargin-topを打ち消し */
+}
+
+.status-button.prev {
+  background-color: #e0e0e0;
+  color: #666;
+}
+
+.status-button.next {
+  background-color: #1976d2;
+  color: white;
+}
+
+.completed-label {
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 12px;
+  font-weight: bold;
+  margin-top: 15px;
 }
 
 /* --- 金額表示エリア（売値と利益） --- */
