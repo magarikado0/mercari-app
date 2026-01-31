@@ -1,0 +1,171 @@
+/* --- 全体の基本設定 --- */
+body {
+  background-color: #f4f4f7; /* 目に優しい薄いグレー */
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding-bottom: 50px; /* 下部に少し余白 */
+  line-height: 1.5;
+}
+
+/* --- コンテナ（スマホ幅に最適化） --- */
+.app-container {
+  width: 100%;
+  padding: 16px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ff333f; /* メルカリ風のレッド */
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 20px 0 12px;
+}
+
+/* --- 入力エリアのカード --- */
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 24px;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* --- 入力フォーム --- */
+input {
+  width: 100%;
+  padding: 14px; /* 指でタップしやすい高さ */
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px; /* iPhoneでフォーカス時にズームされないためのサイズ */
+  box-sizing: border-box; /* パディングを含めた幅計算 */
+  background-color: #fafafa;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ff333f;
+  background-color: #fff;
+}
+
+/* --- 追加ボタン --- */
+button {
+  width: 100%;
+  background-color: #ff333f;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 30px; /* 丸みのあるモダンなボタン */
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+button:active {
+  transform: scale(0.98); /* 押した時の凹み演出 */
+  opacity: 0.9;
+}
+
+/* --- 在庫アイテムのカード --- */
+.item-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column; /* 情報を縦に整理 */
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.item-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+/* --- 金額表示エリア（売値と利益） --- */
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* 下のラインを揃える */
+  border-top: 1px solid #f0f0f0;
+  padding-top: 12px;
+}
+
+.label-small {
+  font-size: 0.75rem;
+  color: #888;
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* 売値の強調表示 */
+.main-price {
+  font-size: 1.8rem; /* どーんと大きく表示 */
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+/* 手取り利益の強調表示 */
+.profit-display {
+  text-align: right;
+}
+
+.profit-amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* 内訳のテキスト */
+.breakdown-text {
+  font-size: 0.8rem;
+  color: #999;
+  text-align: left;
+  margin-top: 4px;
+}
+/* 入力グループ（ラベルとインプットをセットにする） */
+.input-group {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* 単位（¥）付きの入力欄 */
+.input-with-unit {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.unit {
+  position: absolute;
+  left: 12px;
+  color: #888;
+  font-weight: bold;
+}
+
+.input-with-unit input {
+  padding-left: 30px; /* ¥マークの分だけ左に余白を作る */
+  margin: 0; /* 余計なマージンを消す */
+}
